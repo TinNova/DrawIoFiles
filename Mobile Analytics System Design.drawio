@@ -1,9 +1,183 @@
-<mxfile host="app.diagrams.net" modified="2023-10-17T14:26:13.550Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" version="22.0.4" etag="ZjIrB0f7f6MPLI9n3OYk" type="github">
+<mxfile host="app.diagrams.net" modified="2023-10-18T17:58:28.112Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="0JCDSnBhPwdctNx6J3uz" version="22.0.4" type="github">
   <diagram name="Page-1" id="PJGmgsbtzGTumNvcf9OR">
-    <mxGraphModel>
+    <mxGraphModel dx="1242" dy="737" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="CvgWeTbpGKm57QqjHpzC-31" value="&lt;b&gt;Analytics Module&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry y="1200" width="600" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="CvgWeTbpGKm57QqjHpzC-1" value="&lt;h1&gt;Analytics System Design&lt;/h1&gt;&lt;p&gt;&lt;b&gt;Step One, Features:&lt;br&gt;&lt;/b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- Support three analytics services&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/span&gt;- Create to be extendible with additional services&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- SendEvent(), setScreenName()&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- Each event can have different parameters&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- Set &amp;amp; Get UserProperties&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- Used to attribute important events to a user&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- In CTM we set hasClaimedMovies, Caffe and Food to a user&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- For the same method call the params might be different for each service&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- Accessible from everywhere in the app&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- Once instance of each service&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- Created at app start&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Step Two, Designing:&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-weight: bold; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- Explain why you&#39;re designing it like this and the alternatives and why you haven&#39;t chosen those.&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="320" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="CvgWeTbpGKm57QqjHpzC-3" value="&lt;b&gt;Modularisation Strategy&lt;/b&gt;&lt;br&gt;The analytics classes need to be accessed from everywhere,&lt;br&gt;therefore we need it to be in a common module." style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="180" y="570" width="350" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CvgWeTbpGKm57QqjHpzC-4" value="App Module" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="640" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CvgWeTbpGKm57QqjHpzC-5" value="Analytics Module" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="880" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CvgWeTbpGKm57QqjHpzC-6" value=":Feature 1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="720" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CvgWeTbpGKm57QqjHpzC-7" value=":Feature 2" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="720" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CvgWeTbpGKm57QqjHpzC-8" value=":Domain 1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="800" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CvgWeTbpGKm57QqjHpzC-9" value=":Domain 2" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="800" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CvgWeTbpGKm57QqjHpzC-10" value=":Data 1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="880" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CvgWeTbpGKm57QqjHpzC-11" value=":Data 2" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="880" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CvgWeTbpGKm57QqjHpzC-15" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="830" as="sourcePoint" />
+            <mxPoint x="400" y="880" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CvgWeTbpGKm57QqjHpzC-16" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="CvgWeTbpGKm57QqjHpzC-9" target="CvgWeTbpGKm57QqjHpzC-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="310" y="840" as="sourcePoint" />
+            <mxPoint x="410" y="890" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CvgWeTbpGKm57QqjHpzC-17" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="CvgWeTbpGKm57QqjHpzC-6" target="CvgWeTbpGKm57QqjHpzC-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="310" y="840" as="sourcePoint" />
+            <mxPoint x="410" y="890" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CvgWeTbpGKm57QqjHpzC-19" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="CvgWeTbpGKm57QqjHpzC-9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="560" y="780" as="sourcePoint" />
+            <mxPoint x="660" y="830" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CvgWeTbpGKm57QqjHpzC-20" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" target="CvgWeTbpGKm57QqjHpzC-10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="239" y="860" as="sourcePoint" />
+            <mxPoint x="339" y="910" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CvgWeTbpGKm57QqjHpzC-21" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" target="CvgWeTbpGKm57QqjHpzC-11">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="560" y="860" as="sourcePoint" />
+            <mxPoint x="660" y="910" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CvgWeTbpGKm57QqjHpzC-22" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CvgWeTbpGKm57QqjHpzC-4" target="CvgWeTbpGKm57QqjHpzC-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="820" as="sourcePoint" />
+            <mxPoint x="440" y="770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CvgWeTbpGKm57QqjHpzC-23" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="CvgWeTbpGKm57QqjHpzC-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="700" as="sourcePoint" />
+            <mxPoint x="440" y="770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CvgWeTbpGKm57QqjHpzC-24" value="&lt;b&gt;Facade Design Pattern&lt;/b&gt;&lt;br&gt;This pattern will expose only what we need from the analytics library&lt;br&gt;it will also give us a single access point to analytics.&lt;br&gt;&lt;br&gt;The benefits this patterns gives us is that we are able prevent the library&lt;br&gt;imports being used throughout our code, our app will not know which&lt;br&gt;libraries we are using, this will make it easy to swap out the library&lt;br&gt;if the business asks us to.&lt;br&gt;&lt;br&gt;The facade also means that we can add additional libraries without&lt;br&gt;having to refactor any code outside of the analytics module." style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="180" y="1000" width="410" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="CvgWeTbpGKm57QqjHpzC-26" value="AnalyticsImpl" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="325" y="1330" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CvgWeTbpGKm57QqjHpzC-27" value="Analytics&lt;br&gt;&lt;br&gt;fun sendEvent()&lt;br&gt;fun setScreen()" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="325" y="1420" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CvgWeTbpGKm57QqjHpzC-28" value="Firebase" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="1240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CvgWeTbpGKm57QqjHpzC-29" value="Tealium" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="325" y="1240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CvgWeTbpGKm57QqjHpzC-30" value="Swrve" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="460" y="1240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CvgWeTbpGKm57QqjHpzC-32" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="CvgWeTbpGKm57QqjHpzC-27" target="CvgWeTbpGKm57QqjHpzC-26">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="1410" as="sourcePoint" />
+            <mxPoint x="440" y="1360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CvgWeTbpGKm57QqjHpzC-35" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="CvgWeTbpGKm57QqjHpzC-26" target="CvgWeTbpGKm57QqjHpzC-28">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="1410" as="sourcePoint" />
+            <mxPoint x="290" y="1360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CvgWeTbpGKm57QqjHpzC-36" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="CvgWeTbpGKm57QqjHpzC-30">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="1330" as="sourcePoint" />
+            <mxPoint x="540" y="1310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CvgWeTbpGKm57QqjHpzC-37" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="CvgWeTbpGKm57QqjHpzC-29">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="385" y="1330" as="sourcePoint" />
+            <mxPoint x="440" y="1360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CvgWeTbpGKm57QqjHpzC-39" value="&lt;b&gt;Feature Module&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="170" y="1540" width="430" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="CvgWeTbpGKm57QqjHpzC-40" value="FeatureAnalyticsImpl" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="325" y="1580" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CvgWeTbpGKm57QqjHpzC-41" value="FeatureAnalytics&lt;br&gt;&lt;br&gt;fun onBtnClicked()&lt;br&gt;fun onResume()" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="325" y="1670" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CvgWeTbpGKm57QqjHpzC-42" value="FeatureViewModel&lt;br&gt;&lt;br&gt;featureAnalytics.onBtnClicked()&lt;br&gt;featureAnaltics.onResume()" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="292.5" y="1760" width="185" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CvgWeTbpGKm57QqjHpzC-43" value="&lt;b&gt;AnalyticsImpl&lt;br&gt;&lt;br&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial; font-weight: normal;&quot;&gt;AnalyticsImpl(firebase: Firebase, tealium: Tealium, swrve: Swrve): Analytics {&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial; font-weight: normal;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial; font-weight: normal;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;override fun sendEvent() {&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial; font-weight: normal;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;tealium.sendEvent()&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial; font-weight: normal;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;firebase.sendEvent()&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial; font-weight: normal;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;swrve.sendEvent()&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial; font-weight: normal;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;}&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial; font-weight: normal;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial; font-weight: normal;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;override fun setScreen() {&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial; font-weight: normal;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;tealium.setScreen()&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial; font-weight: normal;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;firebase.setScreen()&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial; font-weight: normal;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;swrve.setScreen()&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial; font-weight: normal;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;}&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial; font-weight: normal;&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=left;" vertex="1" parent="1">
+          <mxGeometry x="690" y="1240" width="480" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="CvgWeTbpGKm57QqjHpzC-44" value="&lt;b&gt;FeatureAnalyticsImpl&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;div style=&quot;font-weight: bold;&quot;&gt;&lt;span style=&quot;background-color: initial; font-weight: normal;&quot;&gt;FeatureAnalyticsImpl(&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-weight: bold;&quot;&gt;&lt;span style=&quot;background-color: initial; font-weight: normal;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;analytics: Analytics,&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-weight: bold;&quot;&gt;&lt;span style=&quot;background-color: initial; font-weight: normal;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;userProperties: UserProperties)&lt;/span&gt;&lt;span style=&quot;background-color: initial; font-weight: normal;&quot;&gt;: FeatureAnalytics {&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-weight: bold;&quot;&gt;&lt;span style=&quot;background-color: initial; font-weight: normal;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-weight: bold;&quot;&gt;&lt;span style=&quot;background-color: initial; font-weight: normal;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;override fun onBtnClicked(..) {&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-weight: bold;&quot;&gt;&lt;span style=&quot;background-color: initial; font-weight: normal;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;analytics.sendEvent(..)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-weight: bold;&quot;&gt;&lt;span style=&quot;background-color: initial; font-weight: normal;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;}&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-weight: bold;&quot;&gt;&lt;span style=&quot;background-color: initial; font-weight: normal;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-weight: bold;&quot;&gt;&lt;span style=&quot;background-color: initial; font-weight: normal;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;override fun setScreen(..) {&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-weight: bold;&quot;&gt;&lt;span style=&quot;background-color: initial; font-weight: normal;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;analytics.setScreen(..)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-weight: bold;&quot;&gt;&lt;span style=&quot;background-color: initial; font-weight: normal;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;}&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-weight: bold;&quot;&gt;&lt;span style=&quot;background-color: initial; font-weight: normal;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;font-weight: normal; background-color: initial;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;override fun hasRedeemedMovies(..) {&lt;/div&gt;&lt;span style=&quot;border-color: var(--border-color);&quot;&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;border-color: var(--border-color); background-color: initial; font-weight: normal;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;userProperties.setUserProperty(..)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-weight: bold; border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;border-color: var(--border-color); background-color: initial; font-weight: normal;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/span&gt;&lt;b&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial; font-weight: normal;&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=left;" vertex="1" parent="1">
+          <mxGeometry x="680" y="1620" width="490" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="CvgWeTbpGKm57QqjHpzC-45" value="&lt;b&gt;FeatureAnalyticsImpl&lt;/b&gt; doesn&#39;t have any knowledge about which Analytics libraries it&#39;s using.&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- This means we can swap out libraries and add additional ones without any refactoring." style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="680" y="1570" width="520" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="CvgWeTbpGKm57QqjHpzC-46" value="&lt;b&gt;AnalyticsImpl&lt;/b&gt;&amp;nbsp;is the only class that is aware of the Analytics libraries, this means only&lt;br&gt;this class has to be refactored if we add a new one." style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="690" y="1200" width="480" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="CvgWeTbpGKm57QqjHpzC-47" value="&lt;b&gt;Firebase, Tealium, Swrve&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;div style=&quot;&quot;&gt;Firebase.build()&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=left;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="1320" width="480" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="CvgWeTbpGKm57QqjHpzC-48" value="&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;Firebase, Tealium, Swrve&lt;/b&gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;These classes will contain the builder function which will instantiate the libraries at app start up and we&#39;ll create them as singletons, then they can then be injected into the AnalyticsImpl class.&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt;- This is done to ensure that the AnalyticsImpl class can be easily unitTested as we can easily make mocks of the dependencies.&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="1200" width="480" height="113" as="geometry" />
+        </mxCell>
+        <mxCell id="CvgWeTbpGKm57QqjHpzC-50" value="UserPropertiesImpl" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="1330" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CvgWeTbpGKm57QqjHpzC-51" value="UserProperties&lt;br&gt;&lt;br&gt;fun setUserProperty()&lt;br&gt;fun getUserProperty()" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="1420" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CvgWeTbpGKm57QqjHpzC-52" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="CvgWeTbpGKm57QqjHpzC-51" target="CvgWeTbpGKm57QqjHpzC-50">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="95" y="1410" as="sourcePoint" />
+            <mxPoint x="145" y="1360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CvgWeTbpGKm57QqjHpzC-53" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="CvgWeTbpGKm57QqjHpzC-50" target="CvgWeTbpGKm57QqjHpzC-28">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="350" y="1510" as="sourcePoint" />
+            <mxPoint x="400" y="1460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CvgWeTbpGKm57QqjHpzC-54" value="&lt;b&gt;How Do We Use The Same sendEvent() Method But Handle Different Values&lt;br&gt;That Need To Be Sent?&lt;br&gt;&lt;/b&gt;&lt;br&gt;Check the YouTube Video and check the CTM code, however the answer is that you&lt;br&gt;rely on maps and varags. You need to be clever about it though..." style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="180" y="2040" width="470" height="90" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
