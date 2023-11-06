@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-11-03T15:07:14.721Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="0BjeOfDpEoaqalNTRGQM" version="22.0.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-06T10:15:10.788Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="-leBSW9nCEfkHXDklxY5" version="22.0.8" type="github">
   <diagram name="Page-1" id="TRSkcl2a3WL10ghpUb6u">
     <mxGraphModel dx="1443" dy="2050" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -162,6 +162,9 @@
         </mxCell>
         <mxCell id="L02nFffLBULI9Vl0G02s-51" value="Delete transactionId from Room" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="214" y="898" width="136" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="L02nFffLBULI9Vl0G02s-53" value="&lt;h1&gt;QR Code Systems Design&lt;/h1&gt;&lt;p&gt;The Challenge:&lt;br&gt;Build a system for a QR Code scanning app. The QR code represents a bill, scanning it takes the user to the app where they can confirm or decline the payment.&lt;/p&gt;&lt;p&gt;Features:&amp;nbsp;&lt;/p&gt;&lt;p&gt;- No offline&lt;/p&gt;&lt;p&gt;- Scanning the QR code takes you to the app where the user has to confirm the payment&lt;/p&gt;&lt;p&gt;- A redirect is required (via Intent)&lt;/p&gt;&lt;p&gt;- User uses camera in the phone to scan the QR code optionally they can use a camera from the application&lt;/p&gt;&lt;p&gt;- We need to be to continue the payment transaction even after user terminates the application&lt;/p&gt;&lt;p&gt;- When navigating to PaymentsDetails we will show the shops name, timestamp and the price of the payment (not showing product list)&lt;/p&gt;&lt;p&gt;- Error states, can&#39;t read the QR code, and can read the QR code but QR code is not valid&lt;/p&gt;&lt;p&gt;- QR codes have a number, App should have ability to manually enter the number in case the QR code doesn&#39;t work&lt;/p&gt;&lt;p&gt;- Push Notification that the payment was successful&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- Analytics tracking&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- When user scans two QR codes, the first one is replaced with the second and the first is not persisted in the backstack&lt;/span&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="44" y="-430" width="326" height="580" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
